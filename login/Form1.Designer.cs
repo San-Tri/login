@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -39,6 +40,7 @@
             checkBox1 = new CheckBox();
             label4 = new Label();
             label5 = new Label();
+            timer1 = new System.Windows.Forms.Timer(components);
             SuspendLayout();
             // 
             // label1
@@ -81,6 +83,8 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(318, 23);
             textBox1.TabIndex = 3;
+            textBox1.TextChanged += textBox1_TextChanged;
+            textBox1.KeyDown += textBox1_KeyDown;
             // 
             // textBox2
             // 
@@ -88,6 +92,9 @@
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(316, 23);
             textBox2.TabIndex = 4;
+            textBox2.TextChanged += textBox2_TextChanged;
+            textBox2.KeyPress += textBox2_KeyPress;
+            textBox2.KeyUp += textBox2_KeyUp;
             // 
             // button1
             // 
@@ -194,5 +201,6 @@
         private CheckBox checkBox1;
         private Label label4;
         private Label label5;
+        private System.Windows.Forms.Timer timer1;
     }
 }
