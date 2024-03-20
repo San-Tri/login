@@ -92,6 +92,9 @@ namespace login
                 // Enmascarar el texto real cuando el CheckBox no está marcado
                 string maskedText = new string('*', realPassword.Length);
                 textBox2.Text = maskedText;
+
+                // Actualiza realPassword para reflejar el cambio
+                realPassword = "";
             }
         }
     }
