@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -40,7 +39,6 @@
             checkBox1 = new CheckBox();
             label4 = new Label();
             label5 = new Label();
-            timer1 = new System.Windows.Forms.Timer(components);
             SuspendLayout();
             // 
             // label1
@@ -142,6 +140,7 @@
             checkBox1.TabIndex = 8;
             checkBox1.Text = "Mostrar contraseña";
             checkBox1.UseVisualStyleBackColor = true;
+            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
             // 
             // label4
             // 
@@ -201,6 +200,5 @@
         private CheckBox checkBox1;
         private Label label4;
         private Label label5;
-        private System.Windows.Forms.Timer timer1;
     }
 }
