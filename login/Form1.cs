@@ -78,28 +78,20 @@ namespace login
 
         private void textBox2_KeyUp(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Back)
-            {
-                // Obtiene el texto actual del TextBox
-                string currentText = textBox2.Text;
-
-                // Verifica si hay texto para eliminar
-                if (currentText.Length > 0)
-                {
-                    // Elimina el último carácter
-                    currentText = currentText.Remove(currentText.Length - 1);
-
-                    // Actualiza el texto del TextBox
-                    textBox2.Text = currentText;
-
-                    // Mueve el cursor al final del TextBox
-                    textBox2.SelectionStart = textBox2.Text.Length;
-                }
-            }
-            else
-            {
-                // Aquí puedes manejar otros caracteres como normalmente lo harías
-            }
+             if (e.KeyCode == Keys.Back)
+    {
+        if (textBox2.SelectionLength > 0)
+        {
+            textBox2.SelectedText = "";
+        }
+        else if (textBox2.SelectionStart > 0)
+        {
+            int caret = textBox2.SelectionStart;
+            textBox2.Text = textBox2.Text.Substring(0, caret - 1) + textBox2.Text.Substring(caret);
+            textBox2.SelectionStart = caret - 1;
+        }
+        e.Handled = true;
+    }
         }
     }
 }
