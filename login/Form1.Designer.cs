@@ -44,7 +44,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.BackColor = SystemColors.WindowFrame;
+            label1.BackColor = Color.Indigo;
             label1.Font = new Font("Comic Sans MS", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.ButtonHighlight;
             label1.Location = new Point(167, 41);
@@ -161,7 +161,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.WindowFrame;
+            BackColor = Color.Indigo;
             ClientSize = new Size(395, 495);
             Controls.Add(label5);
             Controls.Add(label4);
