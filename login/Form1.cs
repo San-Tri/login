@@ -97,5 +97,17 @@ namespace login
                 realPassword = "";
             }
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            // Crear una instancia del formulario password
+            password passwordForm = new password();
+        
+            // Mostrar el formulario
+            passwordForm.Show();
+    
+            // Opcional: Cambiar el color del texto del enlace para indicar que ha sido visitado
+            linkLabel1.LinkVisited = true;
+        }
     }
 }
