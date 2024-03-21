@@ -1,3 +1,5 @@
+using Microsoft.Win32;
+
 namespace login
 {
     public partial class Form1 : Form
@@ -102,12 +104,21 @@ namespace login
         {
             // Crear una instancia del formulario password
             password passwordForm = new password();
-        
+
             // Mostrar el formulario
             passwordForm.Show();
-    
+
             // Opcional: Cambiar el color del texto del enlace para indicar que ha sido visitado
             linkLabel1.LinkVisited = true;
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            // Crear una instancia del formulario Registrar
+            registrar registrarForm = new registrar();
+
+            // Mostrar el formulario
+            registrarForm.Show();
         }
     }
 }
