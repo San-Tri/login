@@ -120,5 +120,11 @@ namespace login
             // Mostrar el formulario
             registrarForm.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            welcome welcomeForm = new welcome();
+            welcomeForm.Show();
+        }
     }
 }
